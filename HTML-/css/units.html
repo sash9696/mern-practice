@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .px {
+        font-size: 32px;
+      }
+      .rem {
+        font-size: 2rem;
+      }
+      .em {
+        font-size: 2em;
+      }
+
+      .parent{
+        border: 1px solid;
+        padding: 10px;
+        font-size: 10px;
+      }
+      html{
+        font-size: 14px;
+
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Units</h1>
+    <!-- px em rem -->
+    <div class="px">32px</div>
+    <div class="rem">2rem</div>
+    <div class="em">2em</div>
+    <div class="parent">
+      <div class="px">32px</div>
+      <div class="rem">2rem</div>
+      <div class="em">2em</div>
+    </div>
+
+    <!-- 
+
+    Absolute Unit => px => dpi => it is fixed => it will not change based on any other element
+
+
+    Relative Units  
+    => better suited for responsive sites
+    => they can scale up and down based on another element's size
+
+    em =>relative to its parent element
+    rem => relative to the root element (html tag)
+    % => relative to its parent element
+    vw => relative to the viewport's width
+    vh => relative to the viewport's height
+    
+    
+    1 em = 16px (1* 16)
+    2 em = 32px (2* 16)
+    0.5 em = 8px ( 0.5* 16)
+
+
+     
+    1 rem = 16px (1* 16)
+    2 rem = 32px (2* 16)
+    0.5 rem = 8px ( 0.5* 16)
+
+
+    100%= 16px
+    200%= 32px
+    50%= 8px
+
+
+
+    -->
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .my-class {
+        color: red;
+        font-size: 300px;
+      }
+
+      h1{
+        font-size: 8px !important;
+      }
+    
+    </style>
+  </head>
+  <body>
+    <h1 class="my-class">Cascade</h1>
+
+    <!-- 
+        position and order of appearance
+        specificity => determines which selector is most specific
+
+        origin
+
+    cascade needs to understand the origin of styles that come from in browser, operating system, custom css, external libraries etc
+
+
+    order from least specific to most
+
+    User agent base styles => default styles applied to html elements by browser
+    local user styles => operating system level, browser extensions
+    custom css => the css that we write
+    custom css !important 
+    local user styles !important
+    User agent !important
+
+
+
+
+        importance
+    -->
+  </body>
+</html>

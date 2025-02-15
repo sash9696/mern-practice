@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* a{
+
+        }
+        a[href="#"]{
+
+
+        }
+
+        a => element => C => (0,0,1)
+        [] => attribute => (0,1,0)
+        (0,1,1)
+ */
+
+ /* Specificity score is same but this the case of change in origin */
+      /* .my-class {
+        color: red !important;
+        color: white;
+      } */
+
+
+      /* origin was not able to decide the specific one so Specificity comes in rescue */
+/* 
+
+      .my-class {
+        color: red !important;
+      }
+
+      h1{
+        color: green !important;
+      } */
+
+
+      a{
+        color: red;
+        /* (0,0,1) */
+      }
+
+      a.my-class{
+        color: gray;
+        /* (0,1,1) */
+
+
+      }
+
+
+      a.my-class.another-class{
+        color: darkblue;
+        /* (0,2,1) */
+
+      }
+
+
+
+      a.my-class.another-class[href]{
+        color: darkgoldenrod;
+        /* (0,3,1) */
+
+      }
+
+
+      a.my-class.another-class[href]:hover{
+        color: darkorchid;
+        /* (0,4,1) */
+
+      }
+
+    </style>
+  </head>
+  <body>
+    <h1 class="my-class">Specificity</h1>
+
+    <a class="my-class another-class" href="#">A dummy link</a>
+    <!-- 
+    A => id-like specificity => #myId
+    B => class-like specificity => .my-class, [class], :hover
+    C => element-like specificity => div,  ::after
+    (A, B, C)
+    if a is larger then it is more specific
+    if a values are tied , then larger b will be more specific
+
+
+    * => adds no specificity (0,0,0)
+
+    element or pseudo-element selector
+
+    div{
+    color:red
+    }
+
+    ::selection{
+    color:red}
+
+adds add to  (0,0,1)
+
+-->
+  </body>
+</html>

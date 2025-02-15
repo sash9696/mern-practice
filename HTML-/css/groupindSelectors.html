@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* div.red.gray-text{
+            color: red;
+            color: gray;
+        } */
+      /* 
+        span, li.red{
+            background-color: red;
+        } */
+
+      /* > for immediate child */
+      /* div > strong {
+        background-color: green;
+      } */
+
+      /* child it can be nested */
+      /* div strong {
+        background-color: green;
+      } */
+
+      /* li.red ~ li{
+        color: green;
+      } */
+
+      /* pseudo class : */
+
+      /* li:hover{
+        background-color: red;
+      } */
+/* 
+      input:focus{
+        background-color: green;
+      } */
+
+      /* li:first-child{
+        background-color: aqua;
+      } */
+
+      /* li:last-child{
+        background-color: aqua;
+      } */
+
+      li:nth-child(2n-1){
+        background-color: aqua;
+      }
+
+
+
+
+      /* strong,
+      em,
+      .my-class,
+      [lang]{
+
+      } */
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <input type="text" />
+    <div class="red gray-text">This is a div</div>
+
+    <span>This is a span</span>
+    <div>
+      <span>
+        <strong>strong nested text</strong>
+      </span>
+    </div>
+    <ul>
+      <li>Item A</li>
+      <li class="red">Item B</li>
+      <li>Item C</li>
+      <li>Item D</li>
+    </ul>
+  </body>
+</html>
