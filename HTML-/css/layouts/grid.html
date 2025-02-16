@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .grid-container{
+            display: grid;
+            /* grid-template-columns: 300px 100px 140px; */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            grid-template-columns: repeat(2, 1fr);
+
+
+            gap: 10px;
+
+        }
+
+        .item{
+            background-color: lightblue;
+            padding: 20px;
+            text-align: center;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grid-container">
+        <div class="item">item 1</div>
+        <div class="item">item 2</div>
+        <div class="item">item 3</div>
+        <div class="item">item 3</div>
+        <div class="item">item 3</div>
+        <div class="item">item 3</div>
+
+    </div>
+
+
+    <!-- <h1>Grid</h1> -->
+
+
+    <!-- 
+    
+    grid lines => gris is made u of liesnso grid with 4 columsnhas 5 lines
+
+
+    tracks => track is a space b/w two grid lines
+    row track => b/w row lines
+    column track => b/w column lines
+
+    cell => smallest space by intersection od rown and column tracks ex table cell, spreadsheet cell
+
+    grid area => multiple cells together
+
+
+    gaps =>
+
+    grid container
+    -->
+</body>
+</html>

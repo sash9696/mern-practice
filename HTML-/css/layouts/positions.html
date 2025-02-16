@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+      }
+      div.relative,
+      div.absolute,
+      div.fixed,
+      div.static {
+        border: 2px solid;
+        height: 100px;
+      }
+      /* supoorts properties top , left, bottom , right */
+      div.relative {
+        position: relative;
+        width: 100px;
+        left: 100px;
+      }
+      div.fixed {
+        position: fixed;
+        height: 60px;
+        bottom: 0;
+        right: 0;
+      }
+
+      div.absolute {
+        position: absolute;
+        width: 200px;
+        right: 100px;
+        bottom: 40px;
+      }
+
+      div.parent{
+        position: relative;
+        width: 400px;
+        height: 200px;
+        border: 2px solid;
+        margin-top: 100px;
+        margin-left: 100px
+
+      }
+
+      div.sticky{
+        position: sticky;
+        top: 0;
+        padding: 5px;
+        border: 2px solid;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <h1>Position property</h1> -->
+
+    <!-- <div class="static"></div> -->
+
+    <!-- <div class="relative"></div> -->
+
+    <!-- <div class="fixed">Navbar</div> -->
+
+    <!-- <div class="parent">
+      this is a div element
+      <div class="absolute">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+      </div>
+    </div> -->
+
+    <!-- 
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Modi ipsa temporibus dolore blanditiis obcaecati, labore suscipit iste et quam quos eius. Reprehenderit exercitationem qui laborum possimus obcaecati fugiat ut animi.
+    <div style="height: 200vh;"></div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ipsum modi molestias molestiae excepturi vitae quibusdam, exercitationem officiis! Inventore tempora, praesentium autem nemo architecto asperiores nisi ex commodi saepe nulla. -->
+
+
+
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci aperiam, aliquid a quidem et vero ullam in eaque voluptate illo nam reiciendis mollitia minus? Quo expedita atque assumenda quas doloribus.
+
+
+    <div class="sticky">This a sticky div</div>
+
+    <div style="padding-bottom: 200vh;">
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p> <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p> <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </p>
+    </div>
+
+
+
+    <!-- 
+        static
+        relative => is positioned relative to its original position 
+        fixed => is positioned relative to the viewport => always at the same position even if the page is getting scrolled
+        absolute=> is positioned relative to its nearest positioned ancestor
+        (it its ancestor has postion of relative then it will be relative to it otherwise nearest parent)
+        sticky => relative plus fixed (based on user's scroll position)
+    
+    -->
+
+    <!-- 
+
+    1996 css1 => floats
+    1998 css2
+    2010 css3 => Responsive design
+    2012 => media queries, flexbox
+    2017=> Grid
+    intrinsic web design (rem, em , vw ,%)
+    2021 => Container queries
+    
+    
+    -->
+  </body>
+</html>
