@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Todo App</h2>
+    <div class="container">
+      <form class="task-form" id="task-form">
+        <input
+          type="text"
+          id="task-input"
+          placeholder="Add a new task..."
+          required
+        />
+        <button type="submit">Add task</button>
+      </form>
+
+      <div class="task-list" id="task-list"></div>
+    </div>
+
+    <script>
+      // variables
+
+      let taskForm = document.getElementById("task-form");
+      let taskInput = document.getElementById("task-input");
+      let taskList = document.getElementById("task-list");
+
+      //functions
+      function renderTask(taskText) {
+        const taskItem = document.createElement("div");
+        taskItem.className = "task-item";
+
+        taskItem.innerHTML = `
+            <span> ${taskText} </span>
+           `;
+        taskList.append(taskItem);
+      }
+
+      function addTask(event) {
+        event.preventDefault();
+        console.dir(taskInput);
+
+        let taskText = taskInput.value;
+        if (taskText === "") return;
+        renderTask(taskText);
+
+        taskInput.value = "";
+      }
+
+      //events
+
+      taskForm.addEventListener("submit", addTask);
+    </script>
+  </body>
+</html>
