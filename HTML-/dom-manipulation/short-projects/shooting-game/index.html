@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Multiplayer Shooting Game</h1>
+        <div class="player-container">
+            <div class="player" id="player1">
+                <h2>Player 1</h2>
+                <progress id="health1" value="100" max="100"></progress>
+                <p id="health1Text">100%</p>
+                <button id="shoot1">Shoot Player 2</button>
+            </div>
+            <div class="player" id="player2">
+                <h2>Player 2</h2>
+                <progress id="health2" value="100" max="100"></progress>
+                <p id="health2Text">100%</p>
+                <button id="shoot2">Shoot Player 2</button>
+            </div>
+        </div>
+
+        <h2 id="result"></h2>
+        <button id="restart" style="display: none;">Restart game</button>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

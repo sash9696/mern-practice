@@ -1,0 +1,44 @@
+
+body{
+    text-align: center;
+    padding: 20px;
+}
+
+.game-container{
+    max-width: 800px;
+    margin: auto;
+}
+
+.player-container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.player{
+    padding: 20px;
+    border: 2px solid;
+    border-radius: 10px;
+    width: 40%;
+    box-shadow: 0 2px 10px rgba(220, 21, 21, 0.4);
+}
+
+button{
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: rgb(110, 110, 229) ;
+    color: white;
+    transition: background 0.4s;
+    
+}
+
+button:hover{
+    background: rgb(72, 72, 229) ;
+}
+
+#restart{
+    margin-top: 40px;
+}
