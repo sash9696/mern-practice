@@ -1,186 +1,92 @@
+//imp array methods
+//return new array
+// let users = [
+//   { id: 1, name: "john", age: 20 },
+//   { id: 2, name: "peter", age: 30 },
+//   { id: 3, name: "pete", age: 40 },
+// ];
 
+//filter
 
-//js was used to make web pages alive
-//programs we write in this lang are called scripts
+// let someUsers = users.filter(function(item, index, array){
 
-//earlier livescript
+//     return item.id < 3;
+// });
 
-//sepcification is ecmascript
+// let someUsers = users.filter( item => item.id < 3);
+// console.log(someUsers);
+// console.log(users);
 
-//javascript can execute not only in browser , but also on server or any other device
-//that a javascript engine(special program)
+// pollyflls
 
-//browser has this embedded engine called javascript virtual machine
+// Array.prototype.myFilter = function (callback) {
+//   let result = [];
 
-//v8 => chrome, opera , edge
-//spidermonkey => firefox
-//chakra
-//squirrelfish => safari
+// //   console.log("this", this);
 
+//   for (let i = 0; i < this.length; i++) {
+//     if (callback(this[i], i, this)) {
+//       result.push(this[i]);
+//     }
+//   }
 
-// engine parses the script
-//it compiles the script to machine
-//machine code executes quickly
+//   return result;
+// };
 
-//Note at every point the engine does various optmizations 
+// let someUsers = users.myFilter(function (item, index, array) {
+//   return item.id < 3;
+// });
 
+// console.log(someUsers);
+//function as an argument (callback)
+//new array of that values that satisfies the condition
 
-//javascript in browser?
+//map (transform an array)
 
-//it depends on the environment u r running
+let nums = [10, 20, 30];
 
-//add new html, modify or change existing content, modify styles
-//react to user events, run on mousclick, mouse over, key presse
-//send requests over the network to the servers 
-//get and set cookies ex=> show messages, user prferences
-///remember the data on the client side (local storage, indexed db)
+Array.prototype.myMap = function (callback) {
+    // console.log('this', this)
+  let result = [];
 
-//web apis
+  //   console.log("this", this);
 
+  for (let i = 0; i < this.length; i++) {
+    let transformedValue = callback(this[i], i, this);
+    result.push(transformedValue);
+  }
 
-//js cant do in browser?
+  return result;
+};
 
-//js cannot read and write to the harddisk. no access directly to os functions
+let doubledNums = [10,20,40].myMap((item, index, array) => {
 
-//there ways to interact with camera, microphones but with user's explicit permissions
 
-//diffetent tabs / windows generally dont know abt each other
-//same orgin policy
+   return ({ [index] : item * 2})
+} );
 
-//http
+// let doubledNums = nums.map((num) => num * 2);
+// let doubledNums = nums.map(function(num, index, nums){
 
-//coffeescript, typescript , flow, dart, kotlin
+//     return num * 2;
+// });
+// let doubledNumsObj = nums.map(function(num, index, nums){
 
+//     return ({[num] : num * 2});
+// });
 
+// console.log(doubledNums);
 
-//compatibities issues
+//reduce
 
-//es5 => use strict
 
 
+// let user = {
+//     name:'john',
 
-// "use strict" => always on the top of the page
-// classes and modules implement it behind the scenes
+//     getName: function(){
+//         console.log('this', this)
+//     }
+// };
 
-//Variables
-
-//named storage
-
-// let message;
-
-// message = 'hello world';
-
-// let message = 'hello world';
-
-// let user='john', age=20, message='Greetings';
-
-// console.log(message);
-
-
-// var message = 'hello';
-
-// console.log(message);
-
-
-//rules for variable naming
-
-// name must contain leters, digits or $ and _
-//the first char should not be a digit
-
-
-// let $=1;
-// let _ = 'hello';
-
-// "use strict"
-
-// name = 'john';
-
-// console.log(name);
-
-
-// let name = 'john';
-
-
-// name = 10;
-
-// console.log(name);
-
-// const dob = '20.20.2001';
-
-// dob = 'dsadflsjanl'
-
-
-// const COLOR_RED =  '#F04304F';
-
-
-//Data types
-
-// 8 data types
-
-
-//numbers (both int and floating point)
-
-//special values => Infinity, -Infinity and NaN
-
-// console.log(10/0);
-
-// console.log(Infinity);
-
-
-// console.log('das'/ 20);
-
-
-// console.log(NaN ** 0);
-
-
-// BigInt
-
-// ? (2^53 -1 ) to < -(2^53 -1 )
-//64 bit storage it will store the approx value if not used as a bigint
-
-//ex crytography, microsecond precision timestamp, youtube views count
-
-// const bigInt  = 36263726327368236826328368236823682638263826382362863826382362863283n;
-
-// console.log(typeof bigInt);
-
-
-
-//strings
-
-// '' "" , `` (extended functionality)
-
-// console.log(`${1+2}`);
-
-// let name = 'john';
-
-// console.log(`Hello , ${name}`)
-
-
-//Boolean
-
-// let doesNameExists = false;
-
-// let isAdmin  = true;
-
-// console.log(10 > 2);
-
-
-//null
-
-//value is unknown or will be caluculated in future
-
-// let age = null;
-// //calucate the age 
-
-// //undefined
-// // let age; 
-// //value that is not assigned
-
-// console.log(age)
-
-
-// Objects and symbols
-//all the other types are called as primitive types or scalars
-//special type
-//it is used to create complex entities
+// user.getName();
