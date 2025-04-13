@@ -53,4 +53,9 @@ let count = 0;
 //   return useState;
 // }
 
-// const useCustomState = createUseState();
+// const useState = createUseState();
+
+// count = 0
+// setCount((c) => c++)
+// setCount((c) => c++)
+

@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from "react";
 import { createConnection } from "./chat";
-import { useChatRoom } from "./useChatRoom";
 
 function ChatRoom({ roomId }) {
+
   const [serverUrl, setServerUrl] = useState('https://localhost:12345');
 
-    useChatRoom({
-      roomId,
-      serverUrl
-    });
+
+  useEffect(() => {
+
+    const connection = createConnection(serverUrl, roomId);
+
+    connection.connect();
+
+    return () => {
+      connection.disconnect();
+    }
 
 
-
- 
+  }, [roomId,serverUrl])
 
 
   return (
@@ -20,10 +25,7 @@ function ChatRoom({ roomId }) {
       <label>
         Server URL:
         <input value={serverUrl}
-          onChange={e => {
-            setServerUrl(e.target.value)
-
-          } }
+          onChange={e => setServerUrl(e.target.value)}
         />
         <h1>Welcome to the {roomId} room!</h1>
       </label>
